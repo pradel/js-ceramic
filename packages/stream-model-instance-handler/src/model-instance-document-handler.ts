@@ -122,6 +122,8 @@ export class ModelInstanceDocumentHandler implements StreamHandler<ModelInstance
     const metadata = state.metadata
     const controller = metadata.controllers[0] // TODO(NET-1464): Use `controller` instead of `controllers`
 
+    console.log(metadata.model.toString())
+
     // Verify the signature first
     const streamId = StreamUtils.streamIdFromState(state)
     // TODO(NET-1437): replace family with model
